@@ -102,9 +102,9 @@ def predict_duration(model, prioridade, tipo):
     return predict[0]
 
 
-server = 'https://arazoleonardo.atlassian.net'
-username = 'arazoleonardo@gmail.com'
-token = 'ATATT3xFfGF0qmSprJzUKC8gPpd4FPY1IwXxMAwciVitWXmrFKSgLdQ7-q_te1jruDIMU3ql6ly2cE_0lpvVChSCZCLz5IhzmxDuljWFN5sblBnkqFLJ-0vMDKq7WrmsUmwrCNdzIqmmooRCTfPwS_OYz7IjFQOCzbZTV4S8S6kSS7jcOt4Kzfs=6961FD2D'
+server = '#secret#'
+username = '#secret#'
+token = '#secret#'
 
 jira = connectJira(server, username, token)
 
@@ -119,8 +119,8 @@ if jira:
     if st.button("Criar Tarefa"):
         task = createTask(jira, pro, summ, desc)
         
-        slack_tok = 'xoxb-8008254179440-7985634820226-hkYR0hvEcefom8fCbrOKzGQj'
-        chann = 'projeto-python-scrum'
+        slack_tok = '#secret#'
+        chann = '#secret#'
         messa = f'A nova tarefa foi criada no JIRA: *{summ}* - {desc}'
         send_notif(slack_tok, chann, messa)
 
